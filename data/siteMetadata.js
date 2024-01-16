@@ -12,7 +12,6 @@ const siteMetadata = {
   socialBanner: '/static/favicons/android-chrome-512x512.png',
   email: 'neilwang543@gmail.com',
   github: 'https://github.com/vanstoo',
-  chatgpt: 'https://chatgpt.wangsitu666.top',
   locale: 'zh-cn',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
