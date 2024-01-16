@@ -7,11 +7,11 @@ const siteMetadata = {
   language: 'zh-cn',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.wangsitu666.top',
-  siteRepo: 'https://github.com/neilwang543/tailwind-nextjs-starter-blog',
+  siteRepo: 'https://github.com/vanstoo/tailwind-nextjs-starter-blog',
   siteLogo: '/static/favicons/android-chrome-512x512.png',
   socialBanner: '/static/favicons/android-chrome-512x512.png',
   email: 'neilwang543@gmail.com',
-  github: 'https://github.com/neilwang543',
+  github: 'https://github.com/vanstoo',
   chatgpt: 'https://chatgpt.wangsitu666.top',
   locale: 'zh-cn',
   analytics: {
