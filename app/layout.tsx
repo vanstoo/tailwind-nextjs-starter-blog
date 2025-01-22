@@ -76,12 +76,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          <GoogleAnalytics gaId={siteMetadata?.analytics?.googleAnalyticsId} />
-          <Script
-            src="https://cloud.umami.is/script.js"
-            data-website-id={siteMetadata?.analytics?.umamiWebsiteId}
-            strategy="afterInteractive"
-          />
+          {siteMetadata?.googleAnalyticsId && (
+            <GoogleAnalytics gaId={siteMetadata.googleAnalyticsId} />
+          )}
+          {siteMetadata?.umamiWebsiteId && (
+            <Script
+              src="https://cloud.umami.is/script.js"
+              data-website-id={siteMetadata.umamiWebsiteId}
+              strategy="afterInteractive"
+            />
+          )}
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>

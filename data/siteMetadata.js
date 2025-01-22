@@ -14,14 +14,13 @@ const siteMetadata = {
   email: 'neilwang543@gmail.com',
   github: 'https://github.com/vanstoo',
   locale: 'zh-cn',
-  analytics: {
-    // If you want to use an analytics provider you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
-    // We use an env variable for this site to avoid other users cloning our analytics ID
-    googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
-    umamiWebsiteId: process.env.NEXT_UMAMI_WEBSITE_ID,
-  },
+  // If you want to use an analytics provider you have to add it to the
+  // content security policy in the `next.config.js` file.
+  // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
+  // We use an env variable for this site to avoid other users cloning our analytics ID
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
+  umamiWebsiteId: process.env.NEXT_UMAMI_WEBSITE_ID,
+  analytics: {},
   comments: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
