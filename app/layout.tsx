@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           )}
           {siteMetadata?.umamiWebsiteId && (
             <Script
-              src="https://cloud.umami.is/script.js"
+              src="https://umami.wangsitu666.top/script.js"
               data-website-id={siteMetadata.umamiWebsiteId}
               strategy="afterInteractive"
             />

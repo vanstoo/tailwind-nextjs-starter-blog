@@ -14,10 +14,9 @@ export default function Footer() {
           <SocialIcon kind="chatgpt" href={siteMetadata.chatgpt} size={6} />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div>{`Copyright © ${new Date().getFullYear()}`}</div>
+          <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
           <img
             src={'https://komarev.com/ghpvc/?username=vantoo&abbreviated=true'}
             alt={'预览数'}

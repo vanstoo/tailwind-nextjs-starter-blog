@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: `vanstoo`,
   description: '随便写点',
   language: 'zh-cn',
-  theme: 'dark', // system, dark or light
+  theme: 'system', // system, dark or light
   siteUrl: 'https://www.wangsitu666.top',
   siteRepo: 'https://github.com/vanstoo/tailwind-nextjs-starter-blog',
   siteLogo: '/static/favicons/android-chrome-512x512.png',
@@ -13,6 +13,7 @@ const siteMetadata = {
   profileViewCount: 'https://komarev.com/ghpvc/?username=vantoo&abbreviated=true',
   email: 'neilwang543@gmail.com',
   github: 'https://github.com/vanstoo',
+  chatgpt: 'https://chatgpt.com',
   locale: 'zh-cn',
   // If you want to use an analytics provider you have to add it to the
   // content security policy in the `next.config.js` file.
