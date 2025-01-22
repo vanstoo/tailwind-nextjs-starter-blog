@@ -5,11 +5,12 @@ const siteMetadata = {
   headerTitle: `vanstoo`,
   description: '随便写点',
   language: 'zh-cn',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://www.wangsitu666.top',
   siteRepo: 'https://github.com/vanstoo/tailwind-nextjs-starter-blog',
   siteLogo: '/static/favicons/android-chrome-512x512.png',
   socialBanner: '/static/favicons/android-chrome-512x512.png',
+  profileViewCount: 'https://komarev.com/ghpvc/?username=vantoo&abbreviated=true',
   email: 'neilwang543@gmail.com',
   github: 'https://github.com/vanstoo',
   locale: 'zh-cn',
@@ -18,9 +19,8 @@ const siteMetadata = {
     // content security policy in the `next.config.js` file.
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     // We use an env variable for this site to avoid other users cloning our analytics ID
-    googleAnalytics: {
-      googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, // e.g. G-XXXXXXX
-    },
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
+    umamiWebsiteId: process.env.NEXT_UMAMI_WEBSITE_ID,
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
