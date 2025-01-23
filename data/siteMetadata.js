@@ -19,7 +19,6 @@ const siteMetadata = {
   // content security policy in the `next.config.js` file.
   // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
   // We use an env variable for this site to avoid other users cloning our analytics ID
-  googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
   umamiWebsiteId: process.env.NEXT_UMAMI_WEBSITE_ID,
   analytics: {},
   comments: {

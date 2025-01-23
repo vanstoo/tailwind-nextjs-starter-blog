@@ -2,7 +2,6 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
 import { Space_Grotesk } from 'next/font/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -76,9 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          {siteMetadata?.googleAnalyticsId && (
-            <GoogleAnalytics gaId={siteMetadata.googleAnalyticsId} />
-          )}
           {siteMetadata?.umamiWebsiteId && (
             <Script
               src="https://umami.wangsitu666.top/script.js"
