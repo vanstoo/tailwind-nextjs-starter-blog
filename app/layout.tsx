@@ -1,6 +1,6 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
-
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Space_Grotesk } from 'next/font/google'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -74,14 +74,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+        {siteMetadata?.umamiWebsiteId && (
+          <Script
+            src="https://umami.wangsitu666.top/script.js"
+            data-website-id={siteMetadata.umamiWebsiteId}
+            strategy="afterInteractive"
+          />
+        )}
         <ThemeProviders>
-          {siteMetadata?.umamiWebsiteId && (
-            <Script
-              src="https://umami.wangsitu666.top/script.js"
-              data-website-id={siteMetadata.umamiWebsiteId}
-              strategy="afterInteractive"
-            />
-          )}
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
@@ -92,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </SectionContainer>
         </ThemeProviders>
+        <SpeedInsights />
       </body>
     </html>
   )
