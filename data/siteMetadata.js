@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'vanstoo',
   author: 'vanstoo',
   headerTitle: `vanstoo`,
-  description: '随便写点',
+  description: 'A blog created with Next.js and Tailwind.css',
   language: 'zh-cn',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.wangsitu666.top',
@@ -15,6 +15,8 @@ const siteMetadata = {
   github: 'https://github.com/vanstoo',
   chatgpt: 'https://chatgpt.com',
   locale: 'zh-cn',
+  // set to true if you want a navbar fixed to the top
+  stickyNav: false,
   // If you want to use an analytics provider you have to add it to the
   // content security policy in the `next.config.js` file.
   // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.

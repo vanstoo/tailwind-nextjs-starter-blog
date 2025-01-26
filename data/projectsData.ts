@@ -1,4 +1,11 @@
-const projectsData: ProjectItem[] = [
+interface Project {
+  title: string
+  description: string
+  href?: string
+  imgSrc?: string
+}
+
+const projectsData: Project[] = [
   // {
   //   title: 'A Search Engine',
   //   description: `What if you could look up any information in the world? Webpages, images, videos
@@ -16,12 +23,5 @@ const projectsData: ProjectItem[] = [
   //   href: '/blog/the-time-machine',
   // },
 ]
-
-type ProjectItem = {
-  title: string
-  description: string
-  imgSrc: string
-  href: string
-}
 
 export default projectsData

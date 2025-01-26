@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
+import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 5
 
@@ -11,7 +12,7 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            BLOG
+            Latest
           </h1>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -53,7 +54,7 @@ export default function Home({ posts }) {
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`查看原文: "${title}"`}
+                          aria-label={`Read more: "${title}"`}
                         >
                           查看原文 &rarr;
                         </Link>
@@ -75,6 +76,11 @@ export default function Home({ posts }) {
           >
             All Posts &rarr;
           </Link>
+        </div>
+      )}
+      {siteMetadata.newsletter?.provider && (
+        <div className="flex items-center justify-center pt-4">
+          <NewsletterForm />
         </div>
       )}
     </>
