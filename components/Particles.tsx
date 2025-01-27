@@ -60,14 +60,6 @@ const MyParticles = () => {
             enable: true,
             mode: 'repulse',
           },
-          onTouchStart: {
-            enable: true,
-            mode: 'repulse',
-          },
-          onTouchEnd: {
-            enable: true,
-            mode: 'repulse',
-          },
           onDiv: {
             selectors: {},
             enable: false,
@@ -326,7 +318,7 @@ const MyParticles = () => {
             mode: 'delete',
             value: 0,
           },
-          value: isMobile ? 30 : 100,
+          value: isMobile ? 25 : 100,
         },
         opacity: {
           value: 0.8,

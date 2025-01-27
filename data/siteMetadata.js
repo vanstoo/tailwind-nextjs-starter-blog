@@ -11,7 +11,6 @@ const siteMetadata = {
   siteLogo: '/static/favicons/android-chrome-512x512.png',
   socialBanner: '/static/favicons/android-chrome-512x512.png',
   profileViewCount: 'https://komarev.com/ghpvc/?username=vantoo&abbreviated=true',
-  email: 'neilwang543@gmail.com',
   github: 'https://github.com/vanstoo',
   chatgpt: 'https://chatgpt.com',
   locale: 'zh-cn',

@@ -1,36 +1,22 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import BrandIcon from '@/components/BrandIcon'
 
 export default function Footer() {
   return (
     <footer>
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
-          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
-          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
-          <SocialIcon kind="bluesky" href={siteMetadata.bluesky} size={6} />
-          <SocialIcon kind="x" href={siteMetadata.x} size={6} />
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
-          <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
-          <SocialIcon kind="medium" href={siteMetadata.medium} size={6} />
-          <SocialIcon kind="chatgpt" href={siteMetadata.chatgpt} size={6} />
+      <div className="mb-8 mt-16 items-center justify-between space-y-4 md:mb-10 md:flex md:space-y-0">
+        <div className="flex items-center space-x-2 sm:justify-end ">
+          <span className="mr-1 text-gray-500 dark:text-gray-400">Build with</span>
+          <BrandIcon kind="vercel" href="https://vercel.com/" size={6} />
+          <BrandIcon kind="nextJS" href="https://nextjs.org/" size={6} />
+          <BrandIcon kind="tailwindCSS" href="https://tailwindcss.com/" size={6} />
+          <BrandIcon kind="umami" href="https://umami.is/" size={6} />
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400 sm:justify-end ">
           <div>{`Copyright © ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
-          <img
-            src={'https://komarev.com/ghpvc/?username=vantoo&abbreviated=true'}
-            alt={'预览数'}
-            width={111}
-            height={20}
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
         </div>
       </div>
     </footer>
