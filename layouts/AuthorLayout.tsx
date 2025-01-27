@@ -9,8 +9,7 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  const { name, avatar, occupation, company, X, bluesky, linkedin, github, chatgpt } =
-    content
+  const { name, avatar, occupation, company, X, bluesky, linkedin, github, chatgpt } = content
 
   return (
     <>
