@@ -135,7 +135,7 @@ const ThemeSwitch = () => {
           </MenuItems>
         </Transition>
       </Menu>
-      <Particles theme={resolvedTheme} />
+      <Particles />
     </div>
   )
 }

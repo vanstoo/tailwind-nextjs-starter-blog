@@ -3,11 +3,16 @@ import { useEffect, useMemo, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 import { ISourceOptions } from '@tsparticles/engine'
-const MyParticles = ({ theme }: { theme?: string }) => {
+
+const MyParticles = () => {
   const [init, setInit] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   // this should be run only once per application lifetime
   useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase()
+    const isMobileDevice = /iphone|ipod|ipad|android|mobile|windows phone/i.test(userAgent)
+    setIsMobile(isMobileDevice)
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -19,8 +24,6 @@ const MyParticles = ({ theme }: { theme?: string }) => {
   }, [])
 
   const options = useMemo(() => {
-    const whiteColor = theme === 'light' ? 'rgb(173, 216, 230)' : 'rgb(192, 192, 192)'
-    const blackColor = theme === 'dark' ? 'rgb(192, 192, 192)' : 'rgb(173, 216, 230)'
     return {
       autoPlay: true,
       background: {
@@ -54,6 +57,14 @@ const MyParticles = ({ theme }: { theme?: string }) => {
         detectsOn: 'window',
         events: {
           onClick: {
+            enable: true,
+            mode: 'repulse',
+          },
+          onTouchStart: {
+            enable: true,
+            mode: 'repulse',
+          },
+          onTouchEnd: {
             enable: true,
             mode: 'repulse',
           },
@@ -158,17 +169,17 @@ const MyParticles = ({ theme }: { theme?: string }) => {
             area: {
               gradient: {
                 start: {
-                  value: whiteColor,
+                  value: 'rgb(173, 216, 230)',
                 },
                 stop: {
-                  value: blackColor,
+                  value: 'rgb(173, 216, 230)',
                 },
               },
               radius: 1000,
             },
             shadow: {
               color: {
-                value: blackColor,
+                value: 'rgb(192, 192, 192)',
               },
               length: 2000,
             },
@@ -206,7 +217,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
           },
         },
         color: {
-          value: whiteColor,
+          value: 'rgb(173, 216, 230)',
           animation: {
             h: {
               count: 0,
@@ -291,7 +302,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
           },
           random: false,
           size: false,
-          speed: 3,
+          speed: isMobile ? 4 : 6,
           spin: {
             acceleration: 0,
             enable: false,
@@ -315,10 +326,10 @@ const MyParticles = ({ theme }: { theme?: string }) => {
             mode: 'delete',
             value: 0,
           },
-          value: 100,
+          value: isMobile ? 30 : 100,
         },
         opacity: {
-          value: 0.5,
+          value: 0.8,
           animation: {
             count: 0,
             enable: false,
@@ -335,7 +346,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
         shadow: {
           blur: 0,
           color: {
-            value: blackColor,
+            value: 'rgb(192, 192, 192)',
           },
           enable: false,
           offset: {
@@ -482,7 +493,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
         links: {
           blink: false,
           color: {
-            value: whiteColor,
+            value: 'rgb(173, 216, 230)',
           },
           consent: false,
           distance: 100,
@@ -492,7 +503,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
           shadow: {
             blur: 5,
             color: {
-              value: blackColor,
+              value: 'rgb(192, 192, 192)',
             },
             enable: false,
           },
@@ -529,7 +540,7 @@ const MyParticles = ({ theme }: { theme?: string }) => {
         },
       },
     } as unknown as ISourceOptions
-  }, [theme])
+  }, [isMobile])
 
   if (init) {
     return (
