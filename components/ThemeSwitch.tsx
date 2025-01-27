@@ -11,6 +11,7 @@ import {
   RadioGroup,
   Transition,
 } from '@headlessui/react'
+import Particles from '@/components/Particles'
 
 const Sun = () => (
   <svg
@@ -134,6 +135,7 @@ const ThemeSwitch = () => {
           </MenuItems>
         </Transition>
       </Menu>
+      <Particles theme={resolvedTheme} />
     </div>
   )
 }
