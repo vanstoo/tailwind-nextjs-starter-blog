@@ -7,7 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is umami.wangsitu666.top googletagmanager.com static.cloudflareinsights.com va.vercel-scripts.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is umami.wangsitu666.top googletagmanager.com static.cloudflareinsights.com va.vercel-scripts.com i.scdn.co;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
@@ -75,6 +75,10 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'komarev.com',
           pathname: '/ghpvc/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'i.scdn.co',
         },
       ],
     },

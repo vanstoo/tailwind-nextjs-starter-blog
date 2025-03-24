@@ -1,3 +1,4 @@
+import { clsx } from 'clsx'
 import {
   Github,
   Javascript,
@@ -27,15 +28,24 @@ const components = {
 
 type BrandIconProps = {
   kind: keyof typeof components
-  href: string | undefined
+  href?: string | undefined
   size?: number
+  as?: 'link' | 'icon'
+  className?: string
 }
 
-const BrandIcon = ({ kind, href, size = 8 }: BrandIconProps) => {
-  if (!href) return null
-
+const BrandIcon = ({ kind, href, size = 8, as = 'link', className }: BrandIconProps) => {
   const BrandSvg = components[kind]
-
+  if (as === 'icon' || !href) {
+    return (
+      <BrandSvg
+        className={clsx([
+          `fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`,
+          className,
+        ])}
+      />
+    )
+  }
   return (
     <a
       className="text-sm text-gray-500 transition hover:text-gray-600"
@@ -45,7 +55,10 @@ const BrandIcon = ({ kind, href, size = 8 }: BrandIconProps) => {
     >
       <span className="sr-only">{kind}</span>
       <BrandSvg
-        className={`fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`}
+        className={clsx([
+          `fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`,
+          className,
+        ])}
       />
     </a>
   )
