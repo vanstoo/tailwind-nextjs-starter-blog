@@ -35,17 +35,19 @@ const SpotifyNowPlaying = ({
             <MusicWaves className="mr-2" />
             <Link
               href={songUrl}
-              className="font-medium text-gray-800"
+              className="font-medium text-gray-800 dark:text-gray-200"
               title={`${title} - ${artist || 'Spotify'}`}
             >
               <span data-umami-event="spotify-now-playing-view-song">{title}</span>
             </Link>
           </>
         ) : (
-          <p className="font-medium text-gray-800">Not Playing</p>
+          <p className="font-medium text-gray-800 dark:text-gray-200">Not Playing</p>
         )}
-        <span className="mx-2 text-gray-900">{' – '}</span>
-        <p className="spotify-artist max-w-max truncate text-gray-900">{artist || 'Spotify'}</p>
+        <span className="mx-2  text-gray-900 dark:text-gray-50">{' – '}</span>
+        <p className="spotify-artist max-w-max  truncate text-gray-900 dark:text-gray-50">
+          {artist || 'Spotify'}
+        </p>
       </div>
     </div>
   )
