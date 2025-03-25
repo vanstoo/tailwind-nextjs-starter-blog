@@ -24,10 +24,10 @@ const SpotifyNowPlaying = ({
           alt={title!}
           width={40}
           height={40}
-          className="h-8 w-8 shrink-0 animate-spin rounded-full border border-gray-300 [animation-duration:6s] dark:border-gray-700"
+          className="h-7 w-7 shrink-0 animate-spin rounded-full border border-gray-300 [animation-duration:6s] dark:border-gray-700"
         />
       ) : (
-        <Spotify className="h-8 w-8 shrink-0 fill-current text-spotify" />
+        <Spotify className="h-7 w-7 shrink-0 fill-current text-spotify" />
       )}
       <div className="ml-2 inline-flex truncate">
         {songUrl ? (
