@@ -1,0 +1,2 @@
+vless://f24664a6-7850-4f35-985b-9d317ad5fa28@104.225.147.147:2333?encryption=none&security=reality&type=tcp&sni=www.apple.com&fp=chrome&pbk=8r8wkFrxjZxr2jysQ9gkKBZEUgrh7STwEWkSqOHyWWU&flow=xtls-rprx-vision#docker_vless_reality_vision
+vless://926e6ae4-f2e7-4578-b208-6908dcacf3be@104.225.147.147:23333?encryption=none&security=reality&type=xhttp&sni=www.apple.com&fp=chrome&pbk=O9HLnFP7Z5QWWox1UTgyneKEZCvK78YuXv66_Uahqk0&path=/645e5d124&mode=auto#docker_xhttp_reality
